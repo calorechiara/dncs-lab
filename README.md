@@ -147,7 +147,7 @@ Then, we proceeded to create two VLANs: one meant for subnet-2, with Tag "2". Th
 | Router-2          | 192.168.4.1       | enp0s8              |   4          |
 | Host-C            | 192.168.4.2       | enp0s8              |   4          |
 ## Network Schema 
-![alt text here](https://github.com/calorechiara/dncs-lab/blob/master/network_img/Network_Schema.jpeg)
+![alt text here](https://github.com/calorechiara/dncs-lab/blob/master/network_img/Network_Topology.jpg)
 ## Vagrant file
 The commands that we have used to configure the network are included in the shell script, one for each device implemented. They start running when the Virtual Machines are created by launching the "vagrant up" command. They are all written in the so-called "Vagrantfile". Speaking of addresses, the reason why we have decided to use this particular range of addresses was to accomplish the requirement that stated that we had to create routes as much generic as possible. We have also modified the Vagrantfile in order to insert the specific path for every device that we had. To conclude, we have enlarged Host-C's memory, from 256 MB to 512 MB modifying the option [vb.memory]. That choice was taken because that specific host runs the Docker image (dustnic82/nginx-test). With 256 MB of memory we wouldn't have been able to pull and run the Docker image itself.
 
